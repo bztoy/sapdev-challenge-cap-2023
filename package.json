@@ -2,7 +2,7 @@
   "name": "sapdev-challenge-cap-2023",
   "version": "1.0.0",
   "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "repository": "git@github.com:bztoy/sapdev-challenge-cap-2023.git",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
