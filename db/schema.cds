@@ -23,6 +23,7 @@ entity Holes: cuid {
   par: Integer;
   //par: Integer @assert.range: [3,5];
   score: Integer;
+  result: String;
 }
 
 entity Shots: cuid {
