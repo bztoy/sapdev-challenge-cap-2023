@@ -1,7 +1,15 @@
 const cds = require('@sap/cds')
 
+
 class CatalogService extends cds.ApplicationService {
-    init(){
+    async init(){
+        const remote = await cds.connect.to('RemoteService');
+
+        this.on('*', 'Players', (req) => {
+            console.log('>> delegating to remote service...')
+            return remote.run(req.query)
+        });
+
         const {Rounds, Holes, Shorts} = this.entities;
         this.before ('CREATE', Holes, async req => {
             const score = req.data.score;

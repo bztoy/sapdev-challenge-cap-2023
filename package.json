@@ -6,6 +6,8 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.3.0",
+    "@sap-cloud-sdk/resilience": "^3.3.0",
     "@sap/cds": "^7",
     "express": "^4"
   },
@@ -19,7 +21,11 @@
     "requires": {
       "ReviewsService": {
         "kind": "odata",
-        "impl": "srv/cat-service.js" 
+        "impl": "srv/cat-service.js"
+      },
+      "RemoteService": {
+        "kind": "odata",
+        "model": "srv/external/RemoteService"
       }
     }
   }
